@@ -2,10 +2,10 @@ spring:
   application:
     name: micro-producer
   kafka:
-    bootstrap-servers: kafka:9092
     producer:
+      bootstrap-servers: kafka:9094
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 server:
   port: 3535

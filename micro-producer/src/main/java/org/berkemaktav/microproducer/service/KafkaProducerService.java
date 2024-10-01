@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class KafkaProducerService {
 
-    private final KafkaTemplate<String, Object> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String topic, Object message) {
         String jsonMessage = JsonUtil.serialize(message);
